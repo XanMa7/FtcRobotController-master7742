@@ -62,10 +62,10 @@ public class MecanumDrive extends LinearOpMode  // Defines the program file name
             lift.setPower(mlefty * 1/2); //sets the motor power to 1/2 the value of player two's left stick
             gripServo.setPosition(Range.clip(gripServoPosition, MIN_POSITION, MAX_POSITION));
             if(gamepad2.b && gripServoPosition < MAX_POSITION) { //allows for more simplistic use of the gripper servo, when player two's b button is pressed, it "opens" and allows a cone to be captured
-                gripServoPosition += .5;
+                gripServoPosition += .5;//"opened"
             }
             if(gamepad2.a && gripServoPosition > MIN_POSITION) { //allows for more simplistic use of the gripper servo, when player two's a button is pressed, it "closes" and releases the captured cone
-                gripServoPosition -= 1;
+                gripServoPosition -= 1;//"closed"
             }
 
             if(gamepad1.y){ //allows the robot to rotate with the triggers when player 1 holds "y" down
