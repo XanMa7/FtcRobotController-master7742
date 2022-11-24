@@ -182,7 +182,7 @@ public class BlueAuto extends LinearOpMode
             rightMotor2.setPower(0.5);
             sleep(800);
         }
-          if(tagOfInterest.id == LEFT){
+          else if(tagOfInterest.id == LEFT){
             leftMotor.setPower(0.5);
             sleep(900);
 
