@@ -182,15 +182,35 @@ public class RedAuto extends LinearOpMode
         }
         else if(tagOfInterest.id == LEFT){
             leftMotor.setPower(0.5);
+            leftMotor2.setPower(0.5);//move forward
+            rightMotor.setPower(-0.5);
+            rightMotor2.setPower(-0.5);
+            sleep(900);
+            leftMotor.setPower(0.5); //strafe left into the signal zone
+            leftMotor2.setPower(-0.5);
+            rightMotor.setPower(0.5);
+            rightMotor2.setPower(-0.5);
             sleep(900);
 
         }
         else if (tagOfInterest.id == MIDDLE){
-            grip.setPosition(1);
-            sleep(100);
+            leftMotor.setPower(0.5);
+            leftMotor2.setPower(0.5);//move forward
+            rightMotor.setPower(-0.5);
+            rightMotor2.setPower(-0.5);
+            sleep(900);
+
         }
         else if (tagOfInterest.id == RIGHT){
-            rightMotor.setPower(0.5);
+            leftMotor.setPower(0.5);
+            leftMotor2.setPower(0.5);//move forward
+            rightMotor.setPower(-0.5);
+            rightMotor2.setPower(-0.5);
+            sleep(900);
+            leftMotor.setPower(-0.5); //strafe right into the signal zone
+            leftMotor2.setPower(0.5);
+            rightMotor.setPower(-0.5);
+            rightMotor2.setPower(0.5);
             sleep(900);
         }
 
