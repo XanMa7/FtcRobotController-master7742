@@ -27,7 +27,7 @@ public class MecanumDrive extends LinearOpMode  // Defines the program file name
     @Override
     public void runOpMode() throws InterruptedException
     {
-        frontLeft = hardwareMap.dcMotor.get("front_Left");  // Maps the leftMotor to physical motor
+        frontLeft = hardwareMap.dcMotor.get("front_Left");  // Maps the front left motor to physical motor
         frontRight = hardwareMap.dcMotor.get("front_Right"); // Maps the front right motor to the physical motor
         backLeft = hardwareMap.dcMotor.get("back_Left"); // Maps the left rear motor to the physical motor
         backRight = hardwareMap.dcMotor.get("back_Right");// Maps the right rear motor to physical motor
