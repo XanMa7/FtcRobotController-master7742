@@ -23,6 +23,7 @@ package org.firstinspires.ftc.teamcode.auton;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
@@ -39,6 +40,7 @@ public class RedAuto extends LinearOpMode
     AprilTagDetectionPipeline aprilTagDetectionPipeline;
     DcMotor leftMotor, rightMotor, leftMotor2, rightMotor2, lift;
     Servo grip;
+    ColorSensor color;
     double MIN_POSITION = 0.45, MAX_POSITION = 1;
 
     static final double FEET_PER_METER = 3.28084;
@@ -73,6 +75,7 @@ public class RedAuto extends LinearOpMode
         rightMotor2 = hardwareMap.dcMotor.get("back_Right");// Maps the right motor to physical motor
         lift = hardwareMap.dcMotor.get("slide");
         grip = hardwareMap.servo.get("grab");
+        color = hardwareMap.get(ColorSensor.class, "Color");
         camera.setPipeline(aprilTagDetectionPipeline);
         camera.openCameraDeviceAsync(new OpenCvCamera.AsyncCameraOpenListener()
         {
