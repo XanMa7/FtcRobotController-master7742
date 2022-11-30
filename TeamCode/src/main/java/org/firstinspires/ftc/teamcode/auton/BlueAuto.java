@@ -183,41 +183,40 @@ public class BlueAuto extends LinearOpMode
             leftMotor2.setPower(0.5);
             rightMotor.setPower(-0.5);
             rightMotor2.setPower(0.5);
-            sleep(800);
+            sleep(450);
         }
-          else if(tagOfInterest.id == LEFT){
-            leftMotor.setPower(-0.5);
-            leftMotor2.setPower(-0.5);//move forward
-            rightMotor.setPower(0.5);
-            rightMotor2.setPower(0.5);
-            sleep(900);
-            leftMotor.setPower(0.5); //strafe right into the signal zone
-            leftMotor2.setPower(-0.5);
-            rightMotor.setPower(0.5);
-            rightMotor2.setPower(-0.5);
-            sleep(900);
+          else if(tagOfInterest.id == RIGHT){
+            leftMotor.setPower(-0.3);
+            leftMotor2.setPower(-0.3);//move forward
+            rightMotor.setPower(0.3);
+            rightMotor2.setPower(0.3);
+            sleep(1200);
+            leftMotor.setPower(0.3); //strafe right into the signal zone
+            leftMotor2.setPower(-0.3);
+            rightMotor.setPower(0.3);
+            rightMotor2.setPower(-0.3);
+            sleep(1550);
 
         }
           else if (tagOfInterest.id == MIDDLE){
-            while (color.red() < 100) {
-                leftMotor.setPower(-0.25);
-                leftMotor2.setPower(-0.25);//move forward
-                rightMotor.setPower(0.25);
-                rightMotor2.setPower(0.25);
-            }
-            sleep(900);
+
+                leftMotor.setPower(-0.5);
+                leftMotor2.setPower(-0.5);//move forward
+                rightMotor.setPower(0.5);
+                rightMotor2.setPower(0.5);
+            sleep(450);
         }
-        else if (tagOfInterest.id == RIGHT){
-            leftMotor.setPower(-0.5);
-            leftMotor2.setPower(-0.5);//move forward
-            rightMotor.setPower(0.5);
-            rightMotor2.setPower(0.5);
-            sleep(900);
-            leftMotor.setPower(-0.5); //strafe right into the signal zone
-            leftMotor2.setPower(0.5);
-            rightMotor.setPower(-0.5);
-            rightMotor2.setPower(0.5);
-            sleep(900);
+        else if (tagOfInterest.id == LEFT){
+            leftMotor.setPower(-0.3);
+            leftMotor2.setPower(-0.3);//move forward
+            rightMotor.setPower(0.3);
+            rightMotor2.setPower(0.3);
+            sleep(1200);
+            leftMotor.setPower(-0.3); //strafe right into the signal zone
+            leftMotor2.setPower(0.3);
+            rightMotor.setPower(-0.3);
+            rightMotor2.setPower(0.3);
+            sleep(1550);
         }
 
     }
