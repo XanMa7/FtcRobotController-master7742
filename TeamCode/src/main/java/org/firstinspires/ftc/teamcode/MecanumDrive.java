@@ -52,7 +52,7 @@ public class MecanumDrive extends LinearOpMode  // Defines the program file name
             clock = gamepad1.right_trigger; //allows for the robot to rotate with y being pressed due to the nature of how mecanum wheels move the robot
             coclock = gamepad1.left_trigger;//allows for the robot to rotate with y being pressed due to the nature of how mecanum wheels move the robot
 
-            mlefty = gamepad2.right_stick_y; //sets the stick for the lifting mechanism to the up and down movement of player two's stick
+            mlefty = gamepad2.left_stick_y; //sets the stick for the lifting mechanism to the up and down movement of player two's stick
 
             frontLeft.setPower(pivot + (-vertical - horizontal));
             backLeft.setPower(pivot + (-vertical + horizontal));
