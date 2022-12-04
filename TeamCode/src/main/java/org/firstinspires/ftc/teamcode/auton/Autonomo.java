@@ -31,18 +31,16 @@ import org.openftc.apriltag.AprilTagDetection;
 import org.openftc.easyopencv.OpenCvCamera;
 import org.openftc.easyopencv.OpenCvCameraFactory;
 import org.openftc.easyopencv.OpenCvCameraRotation;
-
 import java.util.ArrayList;
 
 @Autonomous
-public class BlueAuto extends LinearOpMode
+public class Autonomo extends LinearOpMode
 {
     OpenCvCamera camera;
     AprilTagDetectionPipeline aprilTagDetectionPipeline;
     DcMotor leftMotor, rightMotor, leftMotor2, rightMotor2, lift;
     Servo grip;
     ColorSensor color;
-
     double MIN_POSITION = 0.45, MAX_POSITION = 1;
 
     static final double FEET_PER_METER = 3.28084;
@@ -185,33 +183,33 @@ public class BlueAuto extends LinearOpMode
             rightMotor2.setPower(0.5);
             sleep(450);
         }
-          else if(tagOfInterest.id == RIGHT){
+        else if(tagOfInterest.id == LEFT){
             leftMotor.setPower(-0.3);
             leftMotor2.setPower(-0.3);//move forward
             rightMotor.setPower(0.3);
             rightMotor2.setPower(0.3);
             sleep(1200);
-            leftMotor.setPower(0.3); //strafe right into the signal zone
+            leftMotor.setPower(0.3); //strafe left into the signal zone
             leftMotor2.setPower(-0.3);
             rightMotor.setPower(0.3);
             rightMotor2.setPower(-0.3);
             sleep(1550);
 
         }
-          else if (tagOfInterest.id == MIDDLE){
-
-                leftMotor.setPower(-0.5);
-                leftMotor2.setPower(-0.5);//move forward
-                rightMotor.setPower(0.5);
-                rightMotor2.setPower(0.5);
+        else if (tagOfInterest.id == MIDDLE){
+            leftMotor.setPower(-0.5);
+            leftMotor2.setPower(-0.5);//move forward
+            rightMotor.setPower(0.5);
+            rightMotor2.setPower(0.5);
             sleep(450);
+
         }
-        else if (tagOfInterest.id == LEFT){
+        else if (tagOfInterest.id == RIGHT){
             leftMotor.setPower(-0.3);
             leftMotor2.setPower(-0.3);//move forward
             rightMotor.setPower(0.3);
             rightMotor2.setPower(0.3);
-            sleep(1200);
+            sleep(1300);
             leftMotor.setPower(-0.3); //strafe right into the signal zone
             leftMotor2.setPower(0.3);
             rightMotor.setPower(-0.3);
