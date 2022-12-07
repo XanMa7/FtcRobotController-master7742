@@ -177,7 +177,7 @@ public class Autonomo extends LinearOpMode
 
         /* Actually do something useful */
         if(tagOfInterest == null) {
-            leftMotor.setPower(-0.5);
+            leftMotor.setPower(-0.5);//strafe left to terminal
             leftMotor2.setPower(0.5);
             rightMotor.setPower(-0.5);
             rightMotor2.setPower(0.5);
@@ -221,7 +221,7 @@ public class Autonomo extends LinearOpMode
 
     void tagToTelemetry(AprilTagDetection detection)
     {
-        telemetry.addLine(String.format("\nDetected tag ID=%d", detection.id));
+        telemetry.addLine(String.format("\nDetected tag ID=%d", detection.id)); //shows the detected tag and tells you where it is.
         telemetry.addLine(String.format("Translation X: %.2f feet", detection.pose.x*FEET_PER_METER));
         telemetry.addLine(String.format("Translation Y: %.2f feet", detection.pose.y*FEET_PER_METER));
         telemetry.addLine(String.format("Translation Z: %.2f feet", detection.pose.z*FEET_PER_METER));
