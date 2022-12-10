@@ -75,7 +75,6 @@ public class Autonomo extends LinearOpMode
         rightMotor2 = hardwareMap.dcMotor.get("back_Right");// Maps the right motor to physical motor
         lift = hardwareMap.dcMotor.get("slide");
         grip = hardwareMap.servo.get("grab");
-        color = hardwareMap.get(ColorSensor.class, "Color");
         camera.setPipeline(aprilTagDetectionPipeline);
         camera.openCameraDeviceAsync(new OpenCvCamera.AsyncCameraOpenListener()
         {
@@ -209,7 +208,7 @@ public class Autonomo extends LinearOpMode
             leftMotor2.setPower(-0.3);//move forward
             rightMotor.setPower(0.3);
             rightMotor2.setPower(0.3);
-            sleep(1300);
+            sleep(1280);
             leftMotor.setPower(-0.3); //strafe right into the signal zone
             leftMotor2.setPower(0.3);
             rightMotor.setPower(-0.3);
