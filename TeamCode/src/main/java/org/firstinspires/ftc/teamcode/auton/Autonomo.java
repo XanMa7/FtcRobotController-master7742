@@ -194,7 +194,7 @@ public class Autonomo extends LinearOpMode
             leftMotor2.setPower(-0.3);
             rightMotor.setPower(0.3);
             rightMotor2.setPower(-0.3);
-            sleep(400);
+            sleep(300);
 
             lift.setPower(0.5);
             sleep(900);
@@ -206,13 +206,13 @@ public class Autonomo extends LinearOpMode
             sleep(300);
 
             leftMotor.setPower(0);
-            leftMotor2.setPower(0);//move forward
+            leftMotor2.setPower(0);//stop
             rightMotor.setPower(0);
             rightMotor2.setPower(0);
-            sleep(200);
+            sleep(500);
 
             grip.setPosition(1);
-            sleep(400);
+            sleep(1200);
 
             lift.setPower(0.32);
             leftMotor.setPower(0.3); //strafe left into the signal zone
