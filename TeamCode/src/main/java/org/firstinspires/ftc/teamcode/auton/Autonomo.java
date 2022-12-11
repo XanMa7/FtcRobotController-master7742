@@ -194,7 +194,7 @@ public class Autonomo extends LinearOpMode
             leftMotor2.setPower(-0.3);
             rightMotor.setPower(0.3);
             rightMotor2.setPower(-0.3);
-            sleep(300);
+            sleep(700);
 
             leftMotor.setPower(0);
             leftMotor2.setPower(0);//stop
@@ -209,16 +209,16 @@ public class Autonomo extends LinearOpMode
             leftMotor2.setPower(-0.3);//move forward
             rightMotor.setPower(0.3);
             rightMotor2.setPower(0.3);
-            sleep(300);
+            sleep(500);
 
             leftMotor.setPower(0);
             leftMotor2.setPower(0);//stop
             rightMotor.setPower(0);
             rightMotor2.setPower(0);
-            sleep(500);
+            sleep(300);
 
             grip.setPosition(1);
-            sleep(1200);
+            sleep(1000);
 
             leftMotor.setPower(0);
             leftMotor2.setPower(0);//stop
@@ -231,7 +231,7 @@ public class Autonomo extends LinearOpMode
             leftMotor2.setPower(-0.3);
             rightMotor.setPower(0.3);
             rightMotor2.setPower(-0.3);
-            sleep(1000);
+            sleep(1100);
 
         }
         else if (tagOfInterest.id == MIDDLE){
