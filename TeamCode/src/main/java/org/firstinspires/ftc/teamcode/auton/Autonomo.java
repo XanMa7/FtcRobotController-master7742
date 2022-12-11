@@ -40,7 +40,7 @@ public class Autonomo extends LinearOpMode
     AprilTagDetectionPipeline aprilTagDetectionPipeline;
     DcMotor leftMotor, rightMotor, leftMotor2, rightMotor2, lift;
     Servo grip;
-    ColorSensor color;
+    double gripServoPosition;
     double MIN_POSITION = 0.45, MAX_POSITION = 1;
 
     static final double FEET_PER_METER = 3.28084;
@@ -99,6 +99,7 @@ public class Autonomo extends LinearOpMode
          */
         while (!isStarted() && !isStopRequested())
         {
+            gripServoPosition = 0.45;
             ArrayList<AprilTagDetection> currentDetections = aprilTagDetectionPipeline.getLatestDetections();
 
             if(currentDetections.size() != 0)
@@ -188,11 +189,25 @@ public class Autonomo extends LinearOpMode
             rightMotor.setPower(0.3);
             rightMotor2.setPower(0.3);
             sleep(1200);
+
             leftMotor.setPower(0.3); //strafe left into the signal zone
             leftMotor2.setPower(-0.3);
             rightMotor.setPower(0.3);
             rightMotor2.setPower(-0.3);
-            sleep(1550);
+            sleep(400);
+
+            lift.setPower(0.5);
+            sleep(900);
+
+            grip.setPosition(1);
+            sleep(200);
+
+            lift.setPower(0.32);
+            leftMotor.setPower(0.3); //strafe left into the signal zone
+            leftMotor2.setPower(-0.3);
+            rightMotor.setPower(0.3);
+            rightMotor2.setPower(-0.3);
+            sleep(500);
 
         }
         else if (tagOfInterest.id == MIDDLE){
