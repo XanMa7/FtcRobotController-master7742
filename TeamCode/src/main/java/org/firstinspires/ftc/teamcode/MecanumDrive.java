@@ -45,7 +45,7 @@ public class MecanumDrive extends LinearOpMode  // Defines the program file name
             double horizontal = 0;// ''
             double pivot = 0; // ''
             vertical = -gamepad1.left_stick_y * 4/8; //set variables to 3/8's of the up and down value of the stick, reducing speed and risk of de-scoring
-            horizontal = gamepad1.left_stick_x * 4/8;//the 1.1 is to counteract imperfect strafing, with 3/8ths to slow down the bot, reducing de-scoring risk
+            horizontal = gamepad1.left_stick_x * 4/8 * 1.1;//the 1.1 is to counteract imperfect strafing, with 3/8ths to slow down the bot, reducing de-scoring risk
             pivot = gamepad1.right_stick_y * 4/8;//set variables to 3/8's of the up and down value of the stick, reducing speed and risk of de-scoring
             clock = gamepad1.right_trigger; //allows for the robot to rotate with y being pressed due to the nature of how mecanum wheels move the robot
             coclock = gamepad1.left_trigger;//allows for the robot to rotate with y being pressed due to the nature of how mecanum wheels move the robot
