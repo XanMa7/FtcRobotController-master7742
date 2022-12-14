@@ -38,7 +38,7 @@ public class MecanumDrive extends LinearOpMode  // Defines the program file name
         telemetry.update();  // Updates the display of the robot controller
 
         waitForStart();  // Waits for the "Start" button to be pressed on robot controller phone
-        gripServoPosition = 0.45; //sets servo to the "open" position with 1 being the "closed" position
+
         while (opModeIsActive())  // After the "Start" button is pressed and before the "Stop" button is pressed or error occurs
         {
             double vertical = 0; //declare variables
@@ -78,6 +78,7 @@ public class MecanumDrive extends LinearOpMode  // Defines the program file name
                 backRight.setPower(-coclock* 4/8);
             }
             telemetry.addData("Mode","Running");
+
             telemetry.update(); //update to show battery voltage
 
         }
