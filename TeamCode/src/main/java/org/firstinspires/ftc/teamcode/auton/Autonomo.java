@@ -99,7 +99,7 @@ public class Autonomo extends LinearOpMode
          */
         while (!isStarted() && !isStopRequested())
         {
-            gripServoPosition = 0.45;
+            grip.setPosition(.45);
             ArrayList<AprilTagDetection> currentDetections = aprilTagDetectionPipeline.getLatestDetections();
 
             if(currentDetections.size() != 0)
@@ -188,7 +188,7 @@ public class Autonomo extends LinearOpMode
             leftMotor2.setPower(-0.3);//move forward
             rightMotor.setPower(0.3);
             rightMotor2.setPower(0.3);
-            sleep(1200);
+            sleep(1100);
 
             leftMotor.setPower(0.3); //strafe left into the signal zone
             leftMotor2.setPower(-0.3);
@@ -203,13 +203,13 @@ public class Autonomo extends LinearOpMode
             sleep(500);
 
             lift.setPower(0.5);
-            sleep(900);
+            sleep(600);
 
             leftMotor.setPower(-0.3);
             leftMotor2.setPower(-0.3);//move forward
             rightMotor.setPower(0.3);
             rightMotor2.setPower(0.3);
-            sleep(500);
+            sleep(400);
 
             leftMotor.setPower(0);
             leftMotor2.setPower(0);//stop
