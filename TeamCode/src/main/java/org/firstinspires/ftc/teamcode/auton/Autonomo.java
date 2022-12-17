@@ -99,7 +99,7 @@ public class Autonomo extends LinearOpMode
          */
         while (!isStarted() && !isStopRequested())
         {
-            grip.setPosition(.45);
+            grip.setPosition(1);
             ArrayList<AprilTagDetection> currentDetections = aprilTagDetectionPipeline.getLatestDetections();
 
             if(currentDetections.size() != 0)
@@ -184,17 +184,17 @@ public class Autonomo extends LinearOpMode
             sleep(450);
         }
         else if(tagOfInterest.id == LEFT){
-            leftMotor.setPower(-0.3);
-            leftMotor2.setPower(-0.3);//move forward
-            rightMotor.setPower(0.3);
-            rightMotor2.setPower(0.3);
-            sleep(1100);
+            leftMotor.setPower(-0.5);
+            leftMotor2.setPower(-0.5);//move forward
+            rightMotor.setPower(0.5);
+            rightMotor2.setPower(0.5);
+            sleep(650);
 
-            leftMotor.setPower(0.3); //strafe left into the signal zone
-            leftMotor2.setPower(-0.3);
-            rightMotor.setPower(0.3);
-            rightMotor2.setPower(-0.3);
-            sleep(700);
+            leftMotor.setPower(0.5); //strafe left into the signal zone
+            leftMotor2.setPower(-0.5);
+            rightMotor.setPower(0.5);
+            rightMotor2.setPower(-0.5);
+            sleep(500);
 
             leftMotor.setPower(0);
             leftMotor2.setPower(0);//stop
@@ -203,13 +203,16 @@ public class Autonomo extends LinearOpMode
             sleep(500);
 
             lift.setPower(0.5);
-            sleep(600);
+            sleep(800);
 
-            leftMotor.setPower(-0.3);
-            leftMotor2.setPower(-0.3);//move forward
-            rightMotor.setPower(0.3);
-            rightMotor2.setPower(0.3);
-            sleep(400);
+            lift.setPower(0.35);
+            sleep(100);
+
+            leftMotor.setPower(-0.5);
+            leftMotor2.setPower(-0.5);//move forward
+            rightMotor.setPower(0.5);
+            rightMotor2.setPower(0.5);
+            sleep(125);
 
             leftMotor.setPower(0);
             leftMotor2.setPower(0);//stop
@@ -217,21 +220,21 @@ public class Autonomo extends LinearOpMode
             rightMotor2.setPower(0);
             sleep(300);
 
-            grip.setPosition(1);
-            sleep(1000);
+            grip.setPosition(0.45);
+            sleep(300);
 
-            leftMotor.setPower(0);
-            leftMotor2.setPower(0);//stop
-            rightMotor.setPower(0);
-            rightMotor2.setPower(0);
-            sleep(500);
+            leftMotor.setPower(0.5);
+            leftMotor2.setPower(0.5);//Move backwards
+            rightMotor.setPower(-0.5);
+            rightMotor2.setPower(-0.5);
+            sleep(100);
 
             lift.setPower(0.32);
-            leftMotor.setPower(0.3); //strafe left into the signal zone
-            leftMotor2.setPower(-0.3);
-            rightMotor.setPower(0.3);
-            rightMotor2.setPower(-0.3);
-            sleep(1100);
+            leftMotor.setPower(0.5); //strafe left into the signal zone
+            leftMotor2.setPower(-0.5);
+            rightMotor.setPower(0.5);
+            rightMotor2.setPower(-0.5);
+            sleep(400);
 
         }
         else if (tagOfInterest.id == MIDDLE){
