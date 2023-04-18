@@ -54,7 +54,7 @@ public class MecanumDrive extends LinearOpMode  // Defines the program file name
 
             frontLeft.setPower(pivot + (-vertical - horizontal));
             backLeft.setPower(pivot + (-vertical + horizontal));
-            frontRight.setPower(pivot + (-vertical + horizontal));
+            frontRight.setPower(pivot + (-vertical + horizontal)*0.717242);
             backRight.setPower(pivot + (-vertical - horizontal));
 
             lift.setPower(mlefty * 1/2); //sets the motor power to 1/2 the value of player two's left stick
