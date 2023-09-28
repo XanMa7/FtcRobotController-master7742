@@ -1,5 +1,25 @@
 ## NOTICE
 
+Hello, 7742! Welcome to the new season! Before you continue there are some slight adjustments that need to be made here, as you can see below, this is an OLD season's software, but should still work should you need to use it.
+I highly recommend finding the new CENTERSTAGE repo and cloning it. For apriltags, go back through the pushes and find the one I added apriltags on, and roadrunner was a piece of cake to install. now seeing as this is old software, there's a good chance those files should still work.
+But please check the installation video for both roadrunner and apriltags before installing them
+## Reminder
+
+You need to start building your community presence. That's attending FLL  and/(or) FRC events, STEAM fairs, club fairs, fundraising, farmers market event, etc. That was one of the many mistakes that led to the downfall of The Electric Sheep. The connect award (or the inspire award, or the control award [this one is an automatic state award, but you need to be the best of the best for it]) Any of it requires community presence.
+
+There are two ways to make it to state 
+But they all rely on good placement in the robot game.
+
+If you make finals: you should make it to state
+
+if you make semi-finals: you have a good chance, so dont give up, so long as you connected with your community enough to get the inspire (its either inspire or connect). but if you didnt, you end up like us, 3 points from making it to state
+
+*I would not recommend not attending at least 2 FRC events (they're actually really fun to watch), because any event you can attend, you should try and volunteer for because every, last, connection counts. 
+You need strong connections with the community, a strong bot, and a strong portfolio to stand any chance against 21336 (I forgot) as they are most likely going to be at interleague again.
+I'm hoping you all are using android studios (or at least the sheep and goats are)
+Those april tags will work with those bots, and don't forget about tensorflow and/or vueforia as those can help.
+
+
 This repository contains the public FTC SDK for the POWERPLAY (2022-2023) competition season.
 
 ## Welcome!
